@@ -8,7 +8,7 @@ from constants import SCREEN_WIDTH
 from constants import SCREEN_HEIGHT
 def main():
 	dt = 0.0
-	pygame.time.clock()
+	Clock = pygame.time.Clock()
 	
 
 
