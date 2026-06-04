@@ -17,16 +17,15 @@ class Player(CircleShape):
 		self.position += rotated_with_speed_vector
 		
 	def update(self, dt: float) -> None:
-        keys = pygame.key.get_pressed()
-
-        if keys[pygame.K_a]:
-        	self.rotate(-dt)
-        if keys[pygame.K_d]:
-            self.rotate(dt)
-        if keys[pygame.K_w]:
-        	self.move(dt)
-        if keys[pygame.K_s]:
-        	self.move(dt)
+    	keys = pygame.key.get_pressed()
+    	if keys[pygame.K_a]:
+    		self.rotate(-dt)
+    	if keys[pygame.K_d]:
+    		self.rotate(dt)
+    	if keys[pygame.K_w]:
+    		self.move(dt)
+    	if keys[pygame.K_s]:
+    		self.move(-dt)
         
 	def draw (self, screen):
 		pygame.draw.polygon(screen, "white", self.triangle(), LINE_WIDTH)
