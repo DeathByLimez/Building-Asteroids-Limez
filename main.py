@@ -1,10 +1,12 @@
 import pygame
+import sys
 from asteroidfield import AsteroidField
 from logger import log_state
 from constants import SCREEN_WIDTH, SCREEN_HEIGHT
 from player import Player
 from asteroid import Asteroid
 from logger import log_event
+
 def main():
 	dt = 0.0
 	clock = pygame.time.Clock()
@@ -27,7 +29,7 @@ def main():
 				return
 		dt = clock.tick(60) / 1000
 		updatable.update()
-		if log_event("player_hit")
+		if log_event("player_hit"):
 			print("Game Over!")
 			sys.exit()
 		screen.fill("black")
