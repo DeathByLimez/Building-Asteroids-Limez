@@ -23,7 +23,6 @@ def main():
 	Shot.containers = (shots, drawable, updatable)
 	screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 	hero = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
-	
 	while True:
 		log_state()
 		for event in pygame.event.get():
@@ -32,9 +31,9 @@ def main():
 		dt = clock.tick(60) / 1000
 		updatable.update(dt)
 		for asteroid in asteroids:
-    		if asteroid.collides_with(hero):
-        		log_event("player_hit")
-        		print("Game over!")
+    			if asteroid.collides_with(hero):
+        			log_event("player_hit")
+        			print("Game over!")
         		sys.exit()
 		screen.fill("black")
 		for obj in drawable:
