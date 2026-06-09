@@ -34,7 +34,7 @@ def main():
     			if asteroid.collides_with(hero):
         			log_event("player_hit")
         			print("Game over!")
-        		sys.exit()
+        		        sys.exit()
 		screen.fill("black")
 		for obj in drawable:
 			obj.draw(screen)
