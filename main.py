@@ -30,17 +30,16 @@ def main():
                 return
         dt = clock.tick(60) / 1000
         updatable.update(dt)
-                        if asteroid.collides_with(shots)
-                for asteroid in asteroids:
-                        if asteroid.collides_with(hero):
-                                log_event("player_hit")
-                                print("Game over!")
-                                sys.exit()
-                for s in shots:
-                        if asteroid.collides_with(s):
-                                log_event("asteroid_shot")
-                                s.kill()
-                                        asteroid.kill()
+        for asteroid in asteroids:
+            if asteroid.collides_with(hero):
+                log_event("player_hit")
+                print("Game over!")
+                sys.exit()
+            for s in shots:
+                if asteroid.collides_with(s):
+                    log_event("asteroid_shot")
+                    s.kill()
+                    asteroid.split()
         screen.fill("black")
         for obj in drawable:
             obj.draw(screen)
